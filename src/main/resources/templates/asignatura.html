@@ -10,6 +10,33 @@
 </head>
 
 <body>
+
+    <div class="mt container">
+        <br>
+        <div><a href="/" class="btn btn-primary mr-3">Personas</a><a href="/savea/0" class="btn btn-success">Nueva Asignatura</a></div>
+        <h2 th:if="${list.isEmpty()}">Aún no hay registros</h2>
+        <div th:if="${!list.isEmpty()}">
+            <h2>Asignaturas</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Itensidad</th>
+                        <th>Salon</th>
+                        <th>Edificio</th>
+                        <th>Profesor</th>
+                        <th>Opcion</th>
+                        <th>Opcion</th>
+                    </tr>
+                
+
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     
 
 </body>
