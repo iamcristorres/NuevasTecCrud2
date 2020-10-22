@@ -1,5 +1,4 @@
 package co.edu.konrad.crudusuarios.model;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
@@ -16,23 +15,29 @@ public class Asignatura {
     @GeneratedValue(strategy = GenerationType.AUTO) // campo autoincremental
     private Long id;
 
+    //Nombre
     @Column
     private String nombre;
 
+    //Intensidad
     @Column
     private String intensidad;
 
+    //Salon
     @Column
     private String salon;
 
+    //Edificio
     @Column
     private String edificio;
 
+    //Profesor
     @Column
     private String profesor;
 
 
-
+    ///Getters and Setters
+    
     /**
      * @return Long return the id
      */
