@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gestión de asignaturas</title>
+    <link rel="stylesheet" href="../static/css/bootstrap-grid.min.css" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body>
+
+    <div class="mt container">
+        <br>
+        <div><a href="/" class="btn btn-primary mr-3">Personas</a><a href="/savea/0" class="btn btn-success">Nueva Asignatura</a></div>
+        <h2 th:if="${list.isEmpty()}">Aún no hay registros</h2>
+        <div th:if="${!list.isEmpty()}">
+            <h2>Asignaturas</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Itensidad</th>
+                        <th>Salon</th>
+                        <th>Edificio</th>
+                        <th>Profesor</th>
+                        <th>Opcion</th>
+                        <th>Opcion</th>
+                    </tr>
+                
+
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+
+</body>
+
+</html>
