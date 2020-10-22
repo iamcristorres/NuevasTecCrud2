@@ -17,12 +17,14 @@ public class AsignaturaController {
 	@Autowired
 	private AsignaturaServiceAPI asignaturaServiceAPI;
 	
+	//Muestra todos los datos de una vista inicial
 	@RequestMapping("/asignatura")
 	public String index(Model model) {
 		model.addAttribute("list", asignaturaServiceAPI.getAll());
 		return "asignatura";
 	}
 	
+	//Muestra la informacion de un registro espefico o crea uno nuevo segun el valor enviado desde el id
 	@GetMapping("/savea/{id}")
 	public String viewSave(@PathVariable("id") Long id, Model model) {
 		if(id != null && id != 0) {
@@ -38,6 +40,8 @@ public class AsignaturaController {
 		asignaturaServiceAPI.save(asignatura);
 		return "redirect:/asignatura";
 	}
+
+	//Elimina el registro mediante la busqueda por la id enviada
 	@GetMapping("deletea/{id}")
 	public String delete(@PathVariable("id") Long id) {
 		asignaturaServiceAPI.delete(id);
