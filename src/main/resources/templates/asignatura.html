@@ -29,9 +29,20 @@
                         <th>Opcion</th>
                         <th>Opcion</th>
                     </tr>
-                
-
-
+                </thead>
+                <tbody>
+                    <tr th:each="asignatura:${list}">
+                        <td th:text="${asignatura.nombre}"></td>
+                        <td th:text="${asignatura.intensidad}"></td>
+                        <td th:text="${asignatura.salon}"></td>
+                        <td th:text="${asignatura.edificio}"></td>
+                        <td th:text="${asignatura.profesor}"></td>
+                        <td>
+                            <a th:href="@{/deletea/{id}(id=${asignatura.id})}">Eliminar</a>
+                        </td>
+                        <td>
+                            <a th:href="@{/savea/{id}(id=${asignatura.id})}">Editar</a>
+                        </td>
 
                     </tr>
                 </tbody>
