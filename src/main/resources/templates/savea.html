@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gestión de asignatura</title>
+    <link rel="stylesheet" href="../static/css/bootstrap-grid.min.css" th:href="@{/css/bootstrap.css}">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" th:action="@{/savea}" th:object="${asignatura}" method="POST">
+            <div class="form-group">
+                <input type="hidden" id="id" th:field="*{id}">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" th:field="*{nombre}" name="nombre">
+                <label for="intensidad">Intensidad</label>
+                <input type="text" class="form-control" id="intensidad" th:field="*{intensidad}" name="intensidad">
+                <label for="salon">Salon</label>
+                <input type="text" class="form-control" id="salon" th:field="*{salon}" name="salon">
+                <label for="edificio">Edificio</label>
+                <input type="text" class="form-control" id="edificio" th:field="*{edificio}" name="edificio">
+                <label for="profesor">Profesor</label>
+                <input type="text" class="form-control" id="profesor" th:field="*{profesor}" name="profesor">
+            </div>
+            <button type="submit" class="btn">Guardar</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
