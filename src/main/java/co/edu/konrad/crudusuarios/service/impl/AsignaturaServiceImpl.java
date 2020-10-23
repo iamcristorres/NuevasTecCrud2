@@ -19,5 +19,6 @@ public class AsignaturaServiceImpl extends GenericServiceImpl<Asignatura,Long> i
 	public CrudRepository<Asignatura, Long> getDao() {
 		// TODO Auto-generated method stub
 		return AsignaturaDaoAPI;
+		
 	}
 }
