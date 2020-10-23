@@ -29,6 +29,23 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr th:each="persona:${list}">
+                        <td th:text="${persona.nombre}"></td>
+                        <td th:text="${persona.apellido}"></td>
+                        <td th:text="${persona.direccion}"></td>
+                        <td th:text="${persona.telefono}"></td>
+                        <td>
+                            <a th:href="@{/delete/{id}(id=${persona.id})}">Eliminar</a>
+                        </td>
+                        <td>
+                            <a th:href="@{/save/{id}(id=${persona.id})}">Editar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 
 
 </body>
